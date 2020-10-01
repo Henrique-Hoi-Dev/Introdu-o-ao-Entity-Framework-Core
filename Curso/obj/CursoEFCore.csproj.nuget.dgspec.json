@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\exemplo\\curso\\CursoEFCore.csproj": {}
+    "C:\\Projetos\\exemplo\\Curso\\CursoEFCore.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\exemplo\\curso\\CursoEFCore.csproj": {
+    "C:\\Projetos\\exemplo\\Curso\\CursoEFCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\exemplo\\curso\\CursoEFCore.csproj",
+        "projectUniqueName": "C:\\Projetos\\exemplo\\Curso\\CursoEFCore.csproj",
         "projectName": "CursoEFCore",
-        "projectPath": "C:\\Projetos\\exemplo\\curso\\CursoEFCore.csproj",
+        "projectPath": "C:\\Projetos\\exemplo\\Curso\\CursoEFCore.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\exemplo\\curso\\obj\\",
+        "outputPath": "C:\\Projetos\\exemplo\\Curso\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JSxZVyIp8VW/PFx6DNeTqYf7NDG4pmyVC2vxWgx0TYdkCb1JYgCvmaOXRd+F/QYTfaYX+rLE/0kB/2rKhYbL/Q==",
+  "dgSpecHash": "dbl5XiT+tiXvktSNdJjcpZDn39UmEXgF4ZLW799taL3FCoQERkT1agcbaAuvBPu7mHXAI+q4Pbsw81z7syiQWw==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\exemplo\\curso\\CursoEFCore.csproj",
+  "projectFilePath": "C:\\Projetos\\exemplo\\Curso\\CursoEFCore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
