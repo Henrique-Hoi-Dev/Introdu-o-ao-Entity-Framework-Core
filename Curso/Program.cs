@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using CursoEFCore.Domain;
 using CursoEFCore.ValueObjects;
@@ -20,7 +21,78 @@ namespace CursoEFCore
 
             // InserirDados();       
             // InserirDadosEmMassa();  
-            ConsultarDados();   
+            // ConsultarDados();   
+            // CadastrarPedido();
+            // ConsultarPedidoCarregamentoAdiantado();
+            // AtualizaDados();
+            RemoverRegistro();
+
+        }
+
+        private static void RemoverRegistro()
+        {
+            using var db = new Data.ApplicationContext();
+            var cliente = db.Cliente.Find(2);
+            // db.Cliente.Remove(cliente);
+            // db.Remove(cliente);
+            db.Entry(cliente).State = EntityState.Deleted;
+
+            db.SaveChanges();
+        }
+
+        private static void AtualizaDados()
+        {
+            using var db = new Data.ApplicationContext();
+            var cliente = db.Cliente.Find(1);
+            cliente.Nome = "Cliente Alterado passo 1";
+            cliente.Telefone = "22229999";
+
+            // db.Cliente.Update(cliente);
+            db.SaveChanges();
+        }
+
+        private static void ConsultarPedidoCarregamentoAdiantado()
+        {
+            using var db = new Data.ApplicationContext();
+
+            var pedidos = db.Pedido
+            .Include(p=>p.Itens)
+            .ThenInclude(p=>p.Produto)
+            .ToList();
+
+            Console.WriteLine(pedidos.Count);
+        }
+
+        private static void CadastrarPedido()
+        {
+            using var db = new Data.ApplicationContext();
+            
+            var cliente = db.Cliente.FirstOrDefault();
+            var produto = db.Produto.FirstOrDefault();
+
+            var pedido = new Pedido
+            {
+                ClienteId = cliente.Id,
+                IniciadoEm = DateTime.Now,
+                FinalizadoEm = DateTime.Now,
+                Observacao = "Pedido Teste",
+                Status = StatusPedido.Analise,
+                TipoFrete = TipoFrete.SemFrete,
+                Itens = new List<PedidoItem>
+                {
+                    new PedidoItem
+                    {
+                        ProdutoId = produto.Id,
+                        Desconto = 0,
+                        Quantidade = 1,
+                        Valor = 10,
+                    }
+                }
+            };
+
+            db.Pedido.Add(pedido);
+
+            db.SaveChanges();    
         }
 
         private static void ConsultarDados()
